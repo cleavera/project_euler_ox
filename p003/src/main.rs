@@ -1,7 +1,7 @@
 use lib::{primes::{check_prime, Primes}, runner};
 
 fn main() {
-    runner(p003(600851475143));
+    runner(|| p003(600851475143));
 }
 
 fn p003(i: u64) -> u64 {

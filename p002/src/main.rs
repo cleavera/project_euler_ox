@@ -2,7 +2,7 @@ use lib::{fibonacci::Fibonacci, runner};
 
 
 fn main() {
-    runner(p002(4000000));
+    runner(|| p002(4000000));
 }
 
 fn p002(limit: u32) -> u32 {

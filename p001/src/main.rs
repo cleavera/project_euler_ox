@@ -1,7 +1,7 @@
 use lib::runner;
 
 fn main() {
-    runner(p001(1000));
+    runner(|| p001(1000));
 }
 
 fn p001(limit: u32) -> u32 {
