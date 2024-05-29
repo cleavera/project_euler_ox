@@ -5,21 +5,18 @@ fn main() {
 }
 
 fn p005(i: u64) -> u64 {
-    let mut n = 6;
+    let mut inc = 1;
+    let mut n = 1;
 
-    loop {
-        for j in 2..i + 1 {
-            if (n % j) != 0 {
-                break;
-            }
+    for j in 2..(i + 1) {
+       while (n % j) != 0 {
+           n = n + inc;
+       }
 
-            if i == j {
-                return n;
-            }
-        }
-
-        n = n + 6;
+       inc = n;
     }
+
+    return n;
 }
 
 #[cfg(test)]
