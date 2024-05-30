@@ -13,7 +13,11 @@ impl Primes {
         };
     }
 
-    pub fn under(i: u64) -> Primes {
+    pub fn under(mut i: u64) -> Primes {
+        if (i % 2) == 0 {
+            i = i - 1;
+        }
+
         return Primes {
             i,
             reverse: true,
@@ -27,6 +31,10 @@ impl Iterator for Primes {
     fn next(&mut self) -> Option<u64> {
         if self.i <= 1 && self.reverse {
             return None;
+        }
+
+        if self.i == 3 && self.reverse {
+            self.i = self.i - 1;
         }
 
         if self.i == 2 {
