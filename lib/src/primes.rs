@@ -69,7 +69,7 @@ pub fn check_prime(i: u64) -> bool {
 
     let mut x = 3;
 
-    while x < (i / x) {
+    while x <= (i / x) {
         if (i % x) == 0 {
             return false;
         }
@@ -92,6 +92,7 @@ mod tests {
         assert_eq!(check_prime(4), false);
         assert_eq!(check_prime(6), false);
         assert_eq!(check_prime(7), true);
+        assert_eq!(check_prime(9), false);
         assert_eq!(check_prime(13), true);
         assert_eq!(check_prime(52711), true);
         assert_eq!(check_prime(648391), true);
