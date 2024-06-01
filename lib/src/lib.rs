@@ -1,5 +1,6 @@
 use std::fmt::Display;
 
+pub mod big_int;
 pub mod timer;
 pub mod fibonacci;
 pub mod primes;
